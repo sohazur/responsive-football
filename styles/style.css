@@ -3,6 +3,7 @@
 
 /* Common Styles */
 html {
+  /* Now, 10px = 1rem */
   font-size: 62.5%;
 }
 body {
@@ -92,6 +93,7 @@ header {
 .highlights {
   max-width: 50em;
   padding: 3em;
+  margin-bottom: 7em;
   text-align: center;
   box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.15);
 }
@@ -183,6 +185,7 @@ footer {
 /* ----------------------
     Media Query Tablet
 ------------------------*/
+
 @media only screen and (min-width: 66.8em) and (max-width: 99.2em) {
   body {
     width: 100%;
