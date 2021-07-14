@@ -131,11 +131,12 @@ footer p {
     Media Query Mobile 
 ------------------------*/
 
-/* Header */
 @media only screen and (max-width: 66.8em) {
   body {
     width: 100%;
   }
+
+  /* Header */
   .header {
     display: flex;
     flex-direction: column;
@@ -197,6 +198,7 @@ footer p {
     width: 100%;
   }
 
+  /* Header */
   .header-text h1 {
     font-size: 5.6rem;
   }
