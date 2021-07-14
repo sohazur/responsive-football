@@ -10,9 +10,6 @@ body {
   margin: 0;
   font-size: 1.6rem;
 }
-.container {
-  margin: auto;
-}
 
 .link-button {
   text-decoration: none;
@@ -21,17 +18,12 @@ body {
   background-color: #e02c6d;
 }
 
-.link-button:hover {
-  transform: scaleX(1.5);
-  transition: transform 1s;
-}
-
 /* Header Section */
 header {
   background-color: #2d25a0;
 }
 
-header:hover .header-banner {
+.header:hover .header-banner {
   transform: rotate(45deg);
   transition: transform 1.5s;
 }
@@ -56,7 +48,7 @@ header:hover .header-banner {
   grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 2.7em;
   grid-column-gap: 3em;
-  padding: 7em 22em 15.8em;
+  padding: 7em 22em;
 }
 
 .player {
@@ -67,12 +59,29 @@ header:hover .header-banner {
   box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.15);
 }
 
-.player:hover {
+.player:hover,
+.booking:hover {
   box-shadow: 0em 0em 4em rgba(0, 0, 0, 0.15);
 }
 
 .player h3 {
   font-size: 2.8rem;
+}
+
+/* Booking */
+.booking {
+  max-width: 50em;
+  margin: 0 auto 7em;
+  text-align: center;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.15);
+}
+
+.booking h2 {
+  font-size: 2.5em;
 }
 
 /* Footer */
@@ -99,12 +108,15 @@ footer {
 
 /* Header */
 @media only screen and (max-width: 66.8em) {
+  body {
+    width: 100%;
+  }
   .header {
     display: flex;
     flex-direction: column;
     row-gap: 7em;
     width: 100%;
-    padding: 0 0 6em 0;
+    padding: 0 0 6em 1em;
   }
 
   .header-text h1 {
@@ -112,8 +124,7 @@ footer {
   }
 
   .header-banner img {
-    width: 100%;
-    height: 100%;
+    width: 90%;
   }
 
   /* Players */
@@ -129,6 +140,11 @@ footer {
     width: 80%;
   }
 
+  /* Booking  */
+  .booking-box {
+    width: 90%;
+    margin: auto;
+  }
   /* Footer */
   footer img {
     width: 80%;
