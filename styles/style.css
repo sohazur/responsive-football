@@ -11,11 +11,19 @@ body {
   font-size: 1.6rem;
 }
 
+h2 {
+  font-size: 2.5em;
+}
+
 .link-button {
   text-decoration: none;
   padding: 1em 2.4em;
   color: white;
   background-color: #e02c6d;
+}
+
+.box-hover:hover {
+  box-shadow: 0em 0em 4em rgba(0, 0, 0, 0.15);
 }
 
 /* Header Section */
@@ -59,11 +67,6 @@ header {
   box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.15);
 }
 
-.player:hover,
-.booking:hover {
-  box-shadow: 0em 0em 4em rgba(0, 0, 0, 0.15);
-}
-
 .player h3 {
   font-size: 2.8rem;
 }
@@ -80,8 +83,23 @@ header {
   box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.15);
 }
 
-.booking h2 {
-  font-size: 2.5em;
+/* Highlights */
+.highlights-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.highlights {
+  max-width: 50em;
+  padding: 3em;
+  text-align: center;
+  box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.15);
+}
+
+.video iframe {
+  width: 33em;
+  height: 20em;
+  margin-top: 2em;
 }
 
 /* Footer */
@@ -138,19 +156,32 @@ footer {
     width: 80%;
   }
 
-  /* Booking  */
-  .booking-box {
+  /* Booking  and Highlights */
+  .booking-box,
+  .highlights {
     width: 90%;
     margin: auto;
   }
+
+  .highlights.box-hover {
+    padding: 0;
+  }
+
+  .highlights iframe {
+    width: fit-content;
+  }
+
   /* Footer */
+  footer {
+    margin-top: 7em;
+  }
   footer img {
     width: 80%;
   }
 }
 
 /* ----------------------
-    Media Query Mobile
+    Media Query Tablet
 ------------------------*/
 @media only screen and (min-width: 66.8em) and (max-width: 99.2em) {
   body {
@@ -158,7 +189,7 @@ footer {
   }
 
   .header-text h1 {
-    font-size: 3.6rem;
+    font-size: 5.6rem;
   }
 
   .header-banner img {
@@ -186,9 +217,22 @@ footer {
     width: 70%;
   }
 
-  /* Booking  */
-  .booking-box {
+  /* Booking  and Highlights */
+  .booking-box,
+  .highlights {
     width: 90%;
-    margin: auto;
+  }
+
+  .highlights.box-hover {
+    padding: 0;
+  }
+
+  .highlights iframe {
+    width: fit-content;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 7em;
   }
 }
